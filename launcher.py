@@ -28,10 +28,16 @@ tensorflow.keras.losses.the_cost_function = the_cost_function  # For TensorFlow 
 
 # <!--- TRAINING -->
 def train(number_of_epochs, batch_size):
+<<<<<<< HEAD
+    com_cnn = ComCNN(Scaler.original_image_size)  # Loading in RAM the networks
+    com_cnn.encode_the_compact_representation_of_the_original_image()  # An image file is written, containing the CROI
+    rec_cnn = RecCNN()  # Loads the CROI, which will be used by the RecCNN
+=======
     com_cnn = ComCNN(Scaler.original_image_size)
     com_cnn_third_block = com_cnn.encode_the_compact_representation_of_the_original_image()
 
     rec_cnn = RecCNN(com_cnn_third_block)
+>>>>>>> 8e1373364d4e0fd4ca5cc4d935d319980aba3473
     returned_tuple = rec_cnn.set_residual_block()
 
     model = Model(com_cnn.input_layer, returned_tuple[0])

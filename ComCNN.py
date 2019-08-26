@@ -7,7 +7,10 @@ from ImageCodec import ImageCodec
 class ComCNN:
 
     def __init__(self, the_shape):
+<<<<<<< HEAD
+=======
         self.the_shape = the_shape
+>>>>>>> 8e1373364d4e0fd4ca5cc4d935d319980aba3473
         self.input_layer = Input(the_shape)
 
     def __set_first_block(self):
